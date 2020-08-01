@@ -81,3 +81,13 @@ prevBtn.addEventListener('click', () => {
   }
   showPerson(currentItem)
 })
+
+randomBtn.addEventListener('click', () => {
+  let randomNumber = Math.floor(Math.random() * reviews.length);
+  if (currentItem === randomNumber) {
+    currentItem = randomNumber + 1;
+  } else {
+    currentItem = randomNumber;
+  }
+  showPerson(currentItem)
+})
